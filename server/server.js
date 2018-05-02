@@ -1,0 +1,1 @@
+/* Add a node.js backend with a simple rest interface to save notes */
