@@ -2,9 +2,39 @@
 	<head>
 		<title>Proto Notetaking</title>
 		<script src="../resources/javascript/main.js"></script>
+		<script src="../resources/javascript/errors.js"></script>
 	</head>
 
 	<body>
+		<div id="top_navigation">
+			<button id="new_note" type="button" onclick="notImplemented()">Create new Note</button>
+			
+			<select>
+				<option value="Black">Black</option>
+				<option value="White">White</option>
+			</select>
+		</div>
+
+		<div id="filter_navigation">
+			<ul><a href="#">By finish Date</a></ul>
+			<ul><a href="#">By created Date</a></ul>
+			<ul><a href="#">By Importance</a></ul>
+			<ul><a href="#">¨Show finished</a></ul>
+		</div>
+
+		<div id="note_view">
+			<div id="note">
+				<p id="date_description">Nächsten Mittwoch</p>
+				<p id="note_title">CAS FEE Selbststudium / Projekt Aufgabe erledigen</p>
+				<input type="checkbox" name="status" value="empty">Finished<br/>
+				<textarea id="message" rows="2" cols="30">I've come here to chev bubblegum and kick ass!</textarea>
+				<button type="button" onclick="notImplemented()">Edit</button>
+			</div>
+		</div>
+		
+		<!--
+			old ass comment, delete as soon as rest works
+		
 		<p>fire button</p>
 		<button type="button" onclick="fire()"> F I R E </button>
 		<form onsubmit="saveNote()">
@@ -13,5 +43,7 @@
 			Message: <textarea id="message" rows="4" cols="50"></textarea>
 			<input type="submit" value="Submit">
 		</form>
+
+		-->
 	</body>
 </html>
