@@ -1,0 +1,19 @@
+.filter {
+	background-color: cadetblue;
+	padding: 2em;
+	list-style-type: none;
+	text-align: center;
+}
+
+.filter li {
+	display: inline-block;
+	border-style: solid;
+	font-size: 1em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+.filter li#filter_finished {
+	text-align: right;
+	padding-left: 2em;
+}

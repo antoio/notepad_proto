@@ -3,6 +3,7 @@
 		<title>Proto Notetaking</title>
 		<script src="../resources/javascript/main.js"></script>
 		<script src="../resources/javascript/errors.js"></script>
+		<link rel="stylesheet" type="text/css" href="../resources/css/note_overview.css">
 	</head>
 
 	<body>
@@ -16,10 +17,12 @@
 		</div>
 
 		<div id="filter_navigation">
-			<ul><a href="#">By finish Date</a></ul>
-			<ul><a href="#">By created Date</a></ul>
-			<ul><a href="#">By Importance</a></ul>
-			<ul><a href="#">¨Show finished</a></ul>
+			<ul class="filter">
+				<li><a href="#">By finish Date</a></li>
+				<li><a href="#">By created Date</a></li>
+				<li><a href="#">By Importance</a></li>
+				<li id="filter_finished"><a href="#">Show finished</a></li>
+			</ul>
 		</div>
 
 		<div id="note_view">
