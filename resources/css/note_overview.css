@@ -26,19 +26,19 @@ div {
   width: 40%;
 }
 
-#top_navigation button {
-  display: inline-block;
-  width: 40%;
-  margin: 5% 5%;
-  height: 40%;
-}
+	#top_navigation button {
+		display: inline-block;
+		width: 40%;
+		margin: 5% 5%;
+		height: 40%;
+	}
 
-#top_navigation select {
-  display: inline-block;
-  width: 40%;
-  margin: auto auto;
-  height: 40%;
-}
+	#top_navigation select {
+		display: inline-block;
+		width: 40%;
+		margin: auto auto;
+		height: 40%;
+	}
 
 #filter_navigation {
   border: solid;
@@ -48,20 +48,20 @@ div {
   font-size: 20px;
 }
 
-#filter_navigation ul {
-  display: block;
-  height: 100%;
-  width: 100%;
-  margin: auto auto;
-}
+	#filter_navigation ul {
+		display: block;
+		height: 100%;
+		width: 100%;
+		margin: auto auto;
+	}
 
-.filter li {
-	/*background-color: green;*/
-	list-style: none;
-  float: left;
-  margin: 0px 10px;
-  padding: 5%;
-}
+	.filter li {
+		/*background-color: green;*/
+		list-style: none;
+		float: left;
+		margin: 0px 10px;
+		padding: 5%;
+	}
 
 .note {
   display: block;
@@ -70,36 +70,36 @@ div {
   margin: auto auto;
 }
 
-.note .note_header {
-  display: block;
-  height: 30%;
-}
+	.note .note_header {
+		display: block;
+		height: 30%;
+	}
 
-.note .note_header p {
-  display: inline;
-  margin: 0% 10%;
-}
+	.note .note_header p {
+		display: inline;
+		margin: 0% 10%;
+	}
 
-.note .status {
-  width: 40%;
-  float: left;
-  height: 60%;
-}
+	.note .status {
+		width: 40%;
+		float: left;
+		height: 60%;
+	}
 
-.note .message {
-  float: right;
-  width: 50%;
-  height: 60%;
-}
+	.note .message {
+		float: right;
+		width: 50%;
+		height: 60%;
+	}
 
-.note .message textarea {
-  display: inline-block;
-  height: 60%;
-  width: 50%;
-}
+		.note .message textarea {
+			display: inline-block;
+			height: 60%;
+			width: 50%;
+		}
 
-.note .message button {
-  display: inline-block;
-  height: 60%;
-  width: 20%;
-}
+		.note .message button {
+			display: inline-block;
+			height: 60%;
+			width: 20%;
+		}
