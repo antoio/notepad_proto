@@ -1,19 +1,105 @@
-.filter {
-	background-color: cadetblue;
-	padding: 2em;
-	list-style-type: none;
-	text-align: center;
+html {
+  height: 800px;
+}
+
+.content {
+  border: solid;
+  height: 800px;
+  width: 2048px;
+  margin: auto;
+}
+
+div {
+  border: solid;
+  background-color: lightblue;
+  display: block;
+}
+
+.header {
+  height: 20%;
+}
+
+#top_navigation {
+  border: solid;
+  float: right;
+  height: 100%;
+  width: 40%;
+}
+
+#top_navigation button {
+  display: inline-block;
+  width: 40%;
+  margin: 5% 5%;
+  height: 40%;
+}
+
+#top_navigation select {
+  display: inline-block;
+  width: 40%;
+  margin: auto auto;
+  height: 40%;
+}
+
+#filter_navigation {
+  border: solid;
+  float: left;
+  height: 100%;
+  width: 50%;
+  font-size: 20px;
+}
+
+#filter_navigation ul {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: auto auto;
 }
 
 .filter li {
-	display: inline-block;
-	border-style: solid;
-	font-size: 1em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
+	/*background-color: green;*/
+	list-style: none;
+  float: left;
+  margin: 0px 10px;
+  padding: 5%;
 }
 
-.filter li#filter_finished {
-	text-align: right;
-	padding-left: 2em;
+.note {
+  display: block;
+  width: 50%;
+  height: 150px;
+  margin: auto auto;
+}
+
+.note .note_header {
+  display: block;
+  height: 30%;
+}
+
+.note .note_header p {
+  display: inline;
+  margin: 0% 10%;
+}
+
+.note .status {
+  width: 40%;
+  float: left;
+  height: 60%;
+}
+
+.note .message {
+  float: right;
+  width: 50%;
+  height: 60%;
+}
+
+.note .message textarea {
+  display: inline-block;
+  height: 60%;
+  width: 50%;
+}
+
+.note .message button {
+  display: inline-block;
+  height: 60%;
+  width: 20%;
 }
