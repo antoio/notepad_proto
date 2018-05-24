@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title> Detail View </title>
+    <meta charset="utf-8"/>
+    <title>Overview - Note Protoype</title>
   </head>
+  
   <body>
-    
-    <div id="title">
-      <label for="Title">Title</label>
-      <input type="text" />
+    <div class="content">
+      <div id="header">
+      <button id="new_note">Create new note</button>
+        <select id="style_switcher">
+          <option>regular</option>
+          <option>cake and rainbows</option>
+        </select>
+      </div>
+      
+      <div id="filters">
+        <button>By finished date</button>
+        <button>By created date</button>
+        <button>By Importance</button>
+        <button>Show finished</button>
+      </div>
+      
+      <div class="message">
+        <label id="due_date">Nächsten Mittwoch</label>
+        <label id="title">Übersichtlayout fertigstellen</label>
+        <label id="importance">! ! . . .</label>
+        <label><input type="checkbox">Finished</label>
+        <textarea>hack hack hack...</textarea>
+        <button>Edit</button>
+      </div>
     </div>
-
-    <div id="description">
-      <label for="Description">Description</label>
-      <textarea rows="4" cols="50">enter stuff...</textarea>
-    </div>
-
-    <div id="priority">
-      <label for="Priority">Priority</label>
-    </div>
-
-    <div id="date">
-      <label for="Date">Done until:</label>
-      <input type="date" />
-    </div>
-
-    <div id="controls">
-      <button onclick="saveNote()">Save</button>
-      <button>Cancel</button>
-    </div>
-    
-  </body>
+  </body> 
 </html>
