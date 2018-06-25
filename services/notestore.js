@@ -31,8 +31,7 @@ class NoteStore {
     }
 
     async all() {
-				const result = await this.db.find({});
-        return result;
+        return await this.db.find({});
     }
 }
 

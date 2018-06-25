@@ -2,24 +2,23 @@ const notestore = require('../services/notestore')
 
 class NotesController {
 	showIndex(req, res) {
-			res.render("allnotes");
+			res.json("allnotes");
 	};
 
 	async createNote(req, res) {
-			await res.render("succeeded", await notestore.NoteStore.add(req.body));
+			await res.json(await notestore.NoteStore.add(req.body));
 	};
 
 	async showNote(req, res) {
-			await res.render("shownote", await notestore.NoteStore.get(req.params.id));
+			await res.json(await notestore.NoteStore.get(req.params.id));
 	};
 
 	async deleteNote(req, res) {
-			await res.render("shownote", await notestore.NoteStore.delete(req.params.id));
+			await res.json(await notestore.NoteStore.delete(req.params.id));
 	};
 
 	async showAll(req, res) {
-			const notelist = notestore.NoteStore.all();
-			await res.render("overview", notelist);
+			res.json( (await notestore.NoteStore.all() || []) );
 	};
 
 }
