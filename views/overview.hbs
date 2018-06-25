@@ -1,0 +1,27 @@
+<div class="content">
+	<div class="header">
+		<div id="top_navigation">
+			<button id="new_note" type="button" onclick="notImplemented()">Create new Note</button>
+			<select>
+				<option value="Black">Black</option>
+				<option value="White">White</option>
+			</select>
+		</div>
+
+		<div id="filter_navigation">
+			<ul class="filter">
+				<li><a href="#">By finish Date</a></li>
+				<li><a href="#">By created Date</a></li>
+				<li><a href="#">By Importance</a></li>
+				<li id="filter_finished"><a href="#">Show finished</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="note_view">
+		
+		<!-- insert handlebars template for a note -->
+		{{allnotes notelist}}
+		
+	</div>
+</div>

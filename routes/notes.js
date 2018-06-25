@@ -1,16 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const notesController = require('../controller/notesController');
 
-/* GET notes listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-/* POST create note */
-
-/* GET note by id */
-
-/* PUT update note by id */
-
+router.get('/', notesController.NotesController.showIndex.bind(notesController));
+router.get('/notes', notesController.NotesController.showAll.bind(notesController));
+router.post('/notes', notesController.NotesController.createNote.bind(notesController));
+router.get('/notes/:id', notesController.NotesController.showNote.bind(notesController));
+router.delete('/notes/:id', notesController.NotesController.deleteNote.bind(notesController));
 
 module.exports = router;
