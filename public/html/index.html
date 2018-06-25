@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+	<head>
+		<title>Proto Notetaking</title>
+		<script src="../resources/javascript/main.js"></script>
+		<script src="../resources/javascript/errors.js"></script>
+		<link rel="stylesheet" type="text/css" href="../resources/css/note_overview.css">
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="header">
+				<div id="top_navigation">
+					<button id="new_note" type="button" onclick="notImplemented()">Create new Note</button>
+					<select>
+						<option value="Black">Black</option>
+						<option value="White">White</option>
+					</select>
+				</div>
+		
+				<div id="filter_navigation">
+					<ul class="filter">
+						<li><a href="#">By finish Date</a></li>
+						<li><a href="#">By created Date</a></li>
+						<li><a href="#">By Importance</a></li>
+						<li id="filter_finished"><a href="#">Show finished</a></li>
+					</ul>
+				</div>
+			</div>
+		
+			<div id="note_view">
+				
+				<div class="note">
+					<div class="note_header">
+						<p id="date_description">Nächsten Mittwoch</p>
+						<p id="note_title">CAS FEE Selbststudium / Projekt Aufgabe erledigen</p>
+					</div>
+					
+					<div class="status">
+						<input type="checkbox" name="status" value="empty">Finished<br/>
+					</div>
+					
+					<div class="message">
+						<textarea rows="3" cols="30">I've come here to chew bubblegum and kick ass!</textarea>
+						<button type="button" onclick="notImplemented()">Edit</button>
+					</div>  
+				</div>
+		
+				<div class="note">
+					<div class="note_header">
+						<p id="date_description">Nächsten Mittwoch</p>
+						<p id="note_title">CAS FEE Selbststudium / Projekt Aufgabe erledigen</p>
+					</div>
+					
+					<div class="status">
+						<input type="checkbox" name="status" value="empty">Finished<br/>
+					</div>
+					
+					<div class="message">
+						<textarea rows="3" cols="30">I've come here to chew bubblegum and kick ass!</textarea>
+						<button type="button" onclick="notImplemented()">Edit</button>
+					</div>  
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
