@@ -3,9 +3,9 @@ const Datastore = require('nedb-promise');
 class Note {
 	constructor(noteObj) {
 		this.title = noteObj.title;
-    this.message = noteObj.message;
-    this.createdDate = noteObj.createdDate;
-    this.finishedDate = noteObj.finishedDate;
+        this.message = noteObj.message;
+        this.createdDate = noteObj.createdDate;
+        this.finishedDate = noteObj.finishedDate;
 		this.rating = noteObj.rating;
 		this.state = "OK";
 	}
