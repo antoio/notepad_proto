@@ -4,19 +4,19 @@ const valueStorage = require('./valueStorage');
 class RestClient {
 
 	createNote(note) {
-		// pass
+		return ajaxUtil.ajax("POST", "/notes/", note);
 	}
 
 	getNotes() {
-		// pass
+		return ajaxUtil.ajax("GET", "/notes/", undefined);
 	}
 
 	getNote(id) {
-		// pass
+		return ajaxUtil.ajax("GET", `/notes/${id}`, undefined);
 	}
 
 	deleteNote(id) {
-		// pass
+		return ajaxUtil.ajax("DELETE", `/notes/${id}`, undefined);
 	}
 
 }
