@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<head>
+		<title>Proto Notetaking</title>
+		<script src="../resources/javascript/main.js"></script>
+		<script src="../resources/javascript/errors.js"></script>
+		<link rel="stylesheet" type="text/css" href="../resources/css/note_overview.css">
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<h1>Handlebars sample Page</h1>
+
+		<button id="testbutton" type="button">Create new Note</button>
+		
+		<!-- Start of handlebars sample section -->
+		<script id="handle-sample" type="text/x-handlebars-template">
+			
+
+			<div class="entry">
+				<h1>{{title}}</h1>
+				<div class="body">
+					{{body}}
+				</div>
+			</div>
+
+		</script>
+		<!-- end of handlebars sample section -->
+
+		<script src="../js/controllers/indexController.js" type="module"></script>
+	</body>
+</html>
