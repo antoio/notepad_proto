@@ -1,5 +1,5 @@
-const ajaxUtil = require('../utils/ajaxUtil');
-const valueStorage = require('./valueStorage');
+import { ajaxUtil } from '../utils/ajaxUtil.js';
+import { valueStorage } from './valueStorage.js';
 
 class RestClient {
 
@@ -19,6 +19,11 @@ class RestClient {
 		return ajaxUtil.ajax("DELETE", `/notes/${id}`, undefined);
 	}
 
+	test() {
+		let tstr = "this is a test";
+		console.log(tstr);
+		return tstr;
+	}
 }
 
-module.exports.RestClient = new RestClient();
+export const restClient = new RestClient();

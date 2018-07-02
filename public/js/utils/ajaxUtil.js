@@ -1,4 +1,4 @@
-class util {
+class Util {
 	ajax(method, url, data, headers) {
 		return $.ajax({
 			dataType: "json",
@@ -11,4 +11,4 @@ class util {
 	}
 }
 
-module.exports.Util = new util();
+export const ajaxUtil = new Util();

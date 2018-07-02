@@ -14,4 +14,4 @@ class ValueStorage {
 
 }
 
-module.exports.ValueStorage = new ValueStorage();
+export const valueStorage = new ValueStorage();
