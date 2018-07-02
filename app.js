@@ -1,3 +1,4 @@
+// const babel = require('babel-register');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -8,10 +9,6 @@ const logger = require('morgan');
 const notesRouter = require('./routes/notes');
 
 const app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/html')));
