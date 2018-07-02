@@ -28,6 +28,14 @@ $(function() {
 		});
 		
 	});
+
+	// jquery style switcher
+	$("#switcher").change( () => {
+		let base = "../stylesheets/";
+		let url = $("#switcher").val() == "White" ? base + "index.css" : base + "style.css";
+		
+		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', url) );
+	});
 	
 	function renderNotes() {
 		client.getNotes().done( (notes) => {
