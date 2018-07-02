@@ -5,7 +5,8 @@ class Note {
 		this.title = noteObj.title;
         this.message = noteObj.message;
         this.createdDate = noteObj.createdDate;
-        this.finishedDate = noteObj.finishedDate;
+        this.finished = noteObj.finished;
+        this.date_description = noteObj.date_description;
 		this.rating = noteObj.rating;
 		this.state = "OK";
 	}

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<title>Proto Notetaking</title>
-		<script src="../resources/javascript/main.js"></script>
-		<script src="../resources/javascript/errors.js"></script>
-		<link rel="stylesheet" type="text/css" href="../resources/css/note_overview.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
 		<meta charset="utf-8" />
 	</head>
 
@@ -13,7 +11,7 @@
 		<div class="content">
 			<div class="header">
 				<div id="top_navigation">
-					<button id="new_note" type="button" onclick="notImplemented()">Create new Note</button>
+					<button id="new_note" type="button">Create new Note</button>
 					<select>
 						<option value="Black">Black</option>
 						<option value="White">White</option>
@@ -30,40 +28,34 @@
 				</div>
 			</div>
 		
-			<div id="note_view">
-				
+			<div id="note-view"></div>
+
+			<script id="handle-notes" type="text/x-handlebars-template">
+
 				<div class="note">
+					{{#each notes}}
 					<div class="note_header">
-						<p id="date_description">Nächsten Mittwoch</p>
-						<p id="note_title">CAS FEE Selbststudium / Projekt Aufgabe erledigen</p>
+						<p id="date_description">{{date_description}}</p>
+						<p id="note_title">{{title}}</p>
 					</div>
 					
 					<div class="status">
-						<input type="checkbox" name="status" value="empty">Finished<br/>
+						<input type="checkbox" name="status" value="" {{finished}}>Finished<br/>
 					</div>
 					
 					<div class="message">
-						<textarea rows="3" cols="30">I've come here to chew bubblegum and kick ass!</textarea>
+						<textarea rows="3" cols="30">{{message}}</textarea>
 						<button type="button" onclick="notImplemented()">Edit</button>
 					</div>  
+					{{/each}}
 				</div>
-		
-				<div class="note">
-					<div class="note_header">
-						<p id="date_description">Nächsten Mittwoch</p>
-						<p id="note_title">CAS FEE Selbststudium / Projekt Aufgabe erledigen</p>
-					</div>
-					
-					<div class="status">
-						<input type="checkbox" name="status" value="empty">Finished<br/>
-					</div>
-					
-					<div class="message">
-						<textarea rows="3" cols="30">I've come here to chew bubblegum and kick ass!</textarea>
-						<button type="button" onclick="notImplemented()">Edit</button>
-					</div>  
-				</div>
-			</div>
+	
+			</script>
 		</div>
+
+		<script src="../js/libs/jquery-3.3.1.min.js"></script>
+		<script src="../js/libs/handlebars-v4.0.11.js"></script>
+
+		<script src="../js/controllers/indexController.js" type="module"></script>
 	</body>
 </html>
