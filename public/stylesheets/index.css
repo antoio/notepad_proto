@@ -39,7 +39,7 @@
       margin: 0px 25px;
     }
 
-.note-view {
+#note-view {
   display: flex;
   flex-direction: column;
   background-color: green;
