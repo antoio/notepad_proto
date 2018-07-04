@@ -1,0 +1,52 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.parent > * {
+  min-height: 100px;
+}
+
+.nav, #controls {
+  min-height: 100px;
+  background-color: orange;
+  margin: 20px 0px;
+}
+
+.nav > ul {
+  display: flex;
+  flex-direction: row;  
+}
+
+.nav > ul > li {
+  margin: 20px 50px;
+  list-style-type: none;
+}
+
+#title {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#description {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+#date {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.label {
+  flex: 1 1 0;
+  margin: 50px;
+  background-color: yellow;
+  display: block-inline;
+}
+
+.message {
+  flex: 2 1 0;
+}

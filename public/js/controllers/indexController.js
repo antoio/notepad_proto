@@ -18,16 +18,16 @@ $(function() {
 		rating: 4
 	}
 
-	createNote.click(function() {
-		console.log("Ok you clicked the button! Yay 🎉");
+	// createNote.click(function() {
+	// 	console.log("Ok you clicked the button! Yay 🎉");
 
-		client.createNote(note1).done( () => {
-			renderNotes();
-		}).fail( (msg) => {
-			//pass
-		});
+	// 	client.createNote(note1).done( () => {
+	// 		renderNotes();
+	// 	}).fail( (msg) => {
+	// 		//pass
+	// 	});
 		
-	});
+	// });
 
 	// jquery style switcher
 	$("#switcher").change( () => {
