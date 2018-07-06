@@ -29,7 +29,7 @@ $(function() {
 		
 	// });
 
-	$("#edit").click( (event) => {
+	noteContainer.on("click", "#edit", (event) => {
 		client.deleteNote($(event.currentTarget).data("id")).done((msg) => {
 			console.log(msg);
 			renderNotes();
