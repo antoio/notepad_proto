@@ -29,6 +29,12 @@ $(function() {
 		
 	// });
 
+	$("#edit").click( () => {
+		client.deleteNote($("#edit").attr("data-id")).done((msg) => {
+			console.log(msg);
+		});
+	});
+
 	// jquery style switcher
 	$("#switcher").change( () => {
 		let base = "../stylesheets/";
