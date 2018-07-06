@@ -29,9 +29,10 @@ $(function() {
 		
 	// });
 
-	$("#edit").click( () => {
-		client.deleteNote($("#edit").attr("data-id")).done((msg) => {
+	$("#edit").click( (event) => {
+		client.deleteNote($(event.currentTarget).data("id")).done((msg) => {
 			console.log(msg);
+			renderNotes();
 		});
 	});
 
