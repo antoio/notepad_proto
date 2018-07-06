@@ -29,13 +29,7 @@ $(function() {
 		
 	// });
 
-	noteContainer.on("click", "#edit", (event) => {
-		client.deleteNote($(event.currentTarget).data("id")).done((msg) => {
-			console.log(msg);
-			renderNotes();
-		});
-	});
-
+	
 	// jquery style switcher
 	$("#switcher").change( () => {
 		let base = "../stylesheets/";
@@ -50,6 +44,10 @@ $(function() {
 		});
 	}
 	
+	noteContainer.on("click", "#edit", (event) => {
+		client.deleteNote($(event.currentTarget).data("id")).done(renderNotes);
+	});
+
 	renderNotes();
 
 });
