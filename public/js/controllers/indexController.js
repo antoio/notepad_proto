@@ -33,7 +33,7 @@ $(function() {
 	// jquery style switcher
 	$("#switcher").change( () => {
 		let base = "../stylesheets/";
-		let url = $("#switcher").val() == "Black" ? base + "index.css" : base + "style.css";
+		let url = $("#switcher").val() == "Fruity" ? base + "index.css" : base + "style.css";
 		
 		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', url) );
 	});
