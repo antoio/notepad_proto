@@ -6,21 +6,25 @@
 <div class="parent">
 <div id="title">
   <label class="label" for="Title">Title</label>
-  <input class="message" id="title" type="text" />
+  <input class="message" id="message_title" type="text" />
 </div>
 <div id="description">
   <label class="label" for="Description">Description</label>
-  <textarea class="message" rows="4" cols="40">enter stuff...</textarea>
+  <textarea class="message" id="message_text" rows="4" cols="40">enter stuff...</textarea>
 </div>
 <div id="priority">
-  <label class="label" for="Priority">Priority</label>
+  <label class="label" for="message_priority">Priority</label>
 </div>
 <div id="date">
   <label class="label" for="Date">Done until:</label>
-  <input class="message" type="date" />
+  <input class="message" id="message_date" type="date" />
 </div>
 </div>
 <div id="controls">
-  <button onclick="saveNote()">Save</button>
-  <button>Cancel</button>
+  <button id="saveNote">Save</button>
+  <button id="cancelNote">Cancel</button>
 </div>
+
+<script src="../js/libs/jquery-3.3.1.min.js"></script>
+
+<script src="../js/controllers/detailNoteController.js" type="module"></script>
