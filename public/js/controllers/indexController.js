@@ -45,7 +45,11 @@ $(function() {
 	}
 	
 	noteContainer.on("click", "#edit", (event) => {
-		client.deleteNote($(event.currentTarget).data("id")).done(renderNotes);
+		client.deleteNote($(event.currentTarget).data("id")).done(() => {
+			console.log("Note deleted 🤙");
+			
+			renderNotes();
+		});
 	});
 
 	renderNotes();
