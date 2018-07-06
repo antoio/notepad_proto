@@ -4,7 +4,7 @@ body {
 
 .content {
   display: flex;
-  height: 500px;
+  height: auto;
   flex-direction: column;
   background-color: #8cb369;
 }
@@ -53,6 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: center;
+    margin: 20px 20px;
     background-color: #5b8e7d;
     border-style: solid;
     border-color: #bc4b51;

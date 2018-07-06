@@ -31,8 +31,8 @@
 
 			<script id="handle-notes" type="text/x-handlebars-template">
 
+				{{#each notes}}
 				<div class="note">
-					{{#each notes}}
 					<div class="note_header">
 						<p id="date_description">{{date_description}}</p>
 						<p id="note_title">{{title}}</p>
@@ -46,8 +46,8 @@
 						<textarea rows="3" cols="30">{{message}}</textarea>
 						<button id="edit" data-id="{{_id}}" type="button">Edit</button>
 					</div>  
-					{{/each}}
 				</div>
+				{{/each}}
 	
 			</script>
 		</div>
