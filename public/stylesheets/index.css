@@ -1,19 +1,24 @@
+body {
+  background-color: #f4e285;
+}
+
 .content {
   display: flex;
+  height: 500px;
   flex-direction: column;
-  border: solid;
+  background-color: #8cb369;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  background-color: #f4a259;
 }
 
   #top_navigation {
     order: 1;
     flex-grow: 1;
-    background-color: blue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -42,18 +47,21 @@
 #note-view {
   display: flex;
   flex-direction: column;
-  background-color: green;
 }
 
   .note {
     display: flex;
     flex-direction: column;
     align-self: center;
-    background-color: pink;
+    background-color: #5b8e7d;
+    border-style: solid;
+    border-color: #bc4b51;
+    border-radius: 3%;
   }
 
     .note_header {
       display: flex;
+      background-color: #bc4b51;
     }
 
     .note_body {
