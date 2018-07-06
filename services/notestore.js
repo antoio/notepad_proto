@@ -22,9 +22,13 @@ class NoteStore {
         return await this.db.insert(note);
     }
 
+    // async delete(id) {
+    //     await this.db.update({_id: id}, {$set: {"state": "DELETED"}});
+    //     return await this.get(id);
+    // }
+
     async delete(id) {
-        await this.db.update({_id: id}, {$set: {"state": "DELETED"}});
-        return await this.get(id);
+        await this.db.remove({_id: id}, {});
     }
 
     async get(id) {
