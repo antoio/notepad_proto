@@ -12,9 +12,8 @@ $(function() {
 	const note1 = {
 		title: "Hello, World since 1995!",
 		message: "I've come here to chew bubble gum and kick ass!",
-		createdDate: "",
 		finished: "",
-		date_description: "Nächsten Mittwoch CAS FEE",
+		finished_date: "Nächsten Mittwoch CAS FEE",
 		rating: 4
 	}
 

@@ -7,6 +7,10 @@ class RestClient {
 		return ajaxUtil.ajax("POST", "/notes/", note);
 	}
 
+	updateNote(id, note) {
+		return ajaxUtil.ajax("PUT", `/notes/${id}`, note);
+	}
+
 	getNotes() {
 		return ajaxUtil.ajax("GET", "/notes/", undefined);
 	}
@@ -19,11 +23,6 @@ class RestClient {
 		return ajaxUtil.ajax("DELETE", `/notes/${id}`, undefined);
 	}
 
-	test() {
-		let tstr = "this is a test";
-		console.log(tstr);
-		return tstr;
-	}
 }
 
 export const restClient = new RestClient();
