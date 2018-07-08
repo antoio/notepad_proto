@@ -13,6 +13,10 @@ class NotesController {
 			await res.json(await notestore.NoteStore.get(req.params.id));
 	};
 
+	async updateNote(req, res) {
+		await res.json(await notestore.NoteStore.update(req.params.id, req.body));
+	}
+
 	async deleteNote(req, res) {
 			await res.json(await notestore.NoteStore.delete(req.params.id));
 	};

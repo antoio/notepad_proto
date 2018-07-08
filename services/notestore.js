@@ -4,7 +4,7 @@ class Note {
 	constructor(noteObj) {
 		this.title = noteObj.title;
         this.message = noteObj.message;
-        this.createdDate = noteObj.createdDate;
+        this.finished_date = noteObj.finished_date;
         this.finished = noteObj.finished;
         this.date_description = noteObj.date_description;
 		this.rating = noteObj.rating;
@@ -22,10 +22,10 @@ class NoteStore {
         return await this.db.insert(note);
     }
 
-    // async delete(id) {
-    //     await this.db.update({_id: id}, {$set: {"state": "DELETED"}});
-    //     return await this.get(id);
-    // }
+    async update(id, note) {
+        await this.db.update({_id: id}, note, {});
+        return await this.get(id);
+    }
 
     async delete(id) {
         return await this.db.remove({_id: id}, {});
