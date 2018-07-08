@@ -30,6 +30,7 @@ $(function() {
     client.getNote(id).done( (note) => {
       $("#message_title").val(note.title);
       $("#message_text").val(note.message);
+      $("#message_date").val(note.createdDate);
       
       console.table(note);
 
