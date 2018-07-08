@@ -45,6 +45,11 @@ $(function() {
 	}
 	
 	noteContainer.on("click", "#edit", (event) => {
+		let id = $(event.currentTarget).data("id");
+		location.href = `./newNote.html?id=${id}`;
+	});
+
+	noteContainer.on("click", "#delete", (event) => {
 		client.deleteNote($(event.currentTarget).data("id")).done(() => {
 			console.log("Note deleted 🤙");
 			

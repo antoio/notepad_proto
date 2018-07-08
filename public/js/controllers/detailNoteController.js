@@ -1,5 +1,14 @@
 import {restClient as client} from '../services/restClient.js';
 
+function getUrlVars() {
+  let variables = {};
+  let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    variables[key] = value;
+  });
+
+  return variables;
+}
+
 $(function() {
   const saveNote = $("#saveNote");
 
@@ -14,6 +23,18 @@ $(function() {
       this.state = "OK";
     }
   }  
+
+  let id = getUrlVars()["id"];
+  if(id) {
+    console.log(`id is ${id}`);
+    client.getNote(id).done( (note) => {
+      $("#message_title").val(note.title);
+      $("#message_text").val(note.message);
+      
+      console.table(note);
+
+    });
+  }
 
   saveNote.click(() => {
     const title = $("#message_title").val();
