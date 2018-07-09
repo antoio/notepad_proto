@@ -4,20 +4,12 @@ import {restClient as client} from '../services/restClient.js';
 
 $(function() {
 
-	const createNote = $("#new_note");
 	const noteContainer = $("#note-view");
 	const showFinished = $("#filter_finished");
+	const sortByImportance = $("#sort_importance");
 	let toggle_finished = false;
 
 	const noteRenderer = Handlebars.compile($("#handle-notes").html());
-
-	const note1 = {
-		title: "Hello, World since 1995!",
-		message: "I've come here to chew bubble gum and kick ass!",
-		finished: "",
-		finished_date: "Nächsten Mittwoch CAS FEE",
-		rating: 4
-	}
 
 	// jquery style switcher
 	$("#switcher").change( () => {
@@ -27,15 +19,23 @@ $(function() {
 		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', url) );
 	});
 	
-	function renderNotes(filter) {
+	function renderNotes(filter, order) {
 		client.getNotes().done( (notes) => {
 			if(filter) {
 				notes = notes.filter((note) => note.finished );
+			}
+			
+			if(order) {
+				notes = notes.sort(order);
 			}
 
 			noteContainer.html( noteRenderer({notes}) );
 		});
 	}
+
+	sortByImportance.click(() => {
+		renderNotes(toggle_finished, (note1, note2) =>{ return note2.rating - note1.rating });
+	});
 	
 	showFinished.click(() => {
 		toggle_finished = !toggle_finished;
