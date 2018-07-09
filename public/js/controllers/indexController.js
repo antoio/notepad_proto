@@ -29,12 +29,10 @@ $(function() {
 	function renderNotes(filter) {
 		client.getNotes().done( (notes) => {
 			if(filter) {
-				let filteredNotes = notes.filter( (note) => note.finished );
-				console.table(filteredNotes);
-				noteContainer.html( noteRenderer({filteredNotes}) );
-			} else {
-				noteContainer.html( noteRenderer({notes}) );
+				notes = notes.filter((note) => note.finished );
 			}
+			
+			noteContainer.html( noteRenderer({notes}) );
 		});
 	}
 	
