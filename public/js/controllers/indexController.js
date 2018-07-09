@@ -7,6 +7,7 @@ $(function() {
 	const createNote = $("#new_note");
 	const noteContainer = $("#note-view");
 	const showFinished = $("#filter_finished");
+	let toggle_finished = false;
 
 	const noteRenderer = Handlebars.compile($("#handle-notes").html());
 
@@ -31,13 +32,14 @@ $(function() {
 			if(filter) {
 				notes = notes.filter((note) => note.finished );
 			}
-			
+
 			noteContainer.html( noteRenderer({notes}) );
 		});
 	}
 	
 	showFinished.click(() => {
-		renderNotes(true);
+		toggle_finished = !toggle_finished;
+		renderNotes(toggle_finished);
 	});
 
 	noteContainer.on("click", "#edit", (event) => {
