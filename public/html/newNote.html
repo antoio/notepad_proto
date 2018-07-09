@@ -12,8 +12,13 @@
   <label class="label" for="Description">Description</label>
   <textarea class="message" id="message_text" rows="4" cols="40">enter stuff...</textarea>
 </div>
+<div id="finished">
+  <label class="label" for="Finished">Finished</label>
+  <input id="message_isFinished" type="checkbox" name="status">
+</div>
 <div id="priority">
-  <label class="label" for="message_priority">Priority</label>
+  <label class="label" for="priority">Priority</label>
+  <input class="priority" id="message_priority" type="number" min="1" max="5">
 </div>
 <div id="date">
   <label class="label" for="Date">Done until:</label>

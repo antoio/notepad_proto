@@ -6,6 +6,7 @@ $(function() {
 
 	const createNote = $("#new_note");
 	const noteContainer = $("#note-view");
+	const showFinished = $("#filter_finished");
 
 	const noteRenderer = Handlebars.compile($("#handle-notes").html());
 
@@ -17,18 +18,6 @@ $(function() {
 		rating: 4
 	}
 
-	// createNote.click(function() {
-	// 	console.log("Ok you clicked the button! Yay 🎉");
-
-	// 	client.createNote(note1).done( () => {
-	// 		renderNotes();
-	// 	}).fail( (msg) => {
-	// 		//pass
-	// 	});
-		
-	// });
-
-	
 	// jquery style switcher
 	$("#switcher").change( () => {
 		let base = "../stylesheets/";
@@ -37,12 +26,22 @@ $(function() {
 		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', url) );
 	});
 	
-	function renderNotes() {
+	function renderNotes(filter) {
 		client.getNotes().done( (notes) => {
-			noteContainer.html( noteRenderer({notes}) );
+			if(filter) {
+				let filteredNotes = notes.filter( (note) => note.finished );
+				console.table(filteredNotes);
+				noteContainer.html( noteRenderer({filteredNotes}) );
+			} else {
+				noteContainer.html( noteRenderer({notes}) );
+			}
 		});
 	}
 	
+	showFinished.click(() => {
+		renderNotes(true);
+	});
+
 	noteContainer.on("click", "#edit", (event) => {
 		let id = $(event.currentTarget).data("id");
 		location.href = `./newNote.html?id=${id}`;
