@@ -4,6 +4,7 @@ class Note {
 	constructor(noteObj) {
 		this.title = noteObj.title;
         this.message = noteObj.message;
+        this.created_date = noteObj.created_date;
         this.finished_date = noteObj.finished_date;
         this.finished = noteObj.finished;
         this.date_description = noteObj.date_description;

@@ -17,6 +17,7 @@ $(function() {
       this.title = title;
       this.message = message;
       this.finished_date = finished_date;
+      this.created_date = Date.now();
       this.finished = finished;
       //this.date_description = date_description;
       this.rating = rating;
