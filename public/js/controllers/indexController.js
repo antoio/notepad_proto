@@ -45,7 +45,7 @@ $(function() {
 	});
 
 	sortByCreationDate.click(() => {
-		renderNotes(toggle_finished, (note1, note2) =>{ return note2.created_date - note1.created_date });
+		renderNotes(toggle_finished, (note1, note2) =>{ return note1.created_date - note2.created_date });
 	});
 
 	sortByFinishedDate.click(() => {
