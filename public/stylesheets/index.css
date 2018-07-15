@@ -16,6 +16,11 @@ body {
   background-color: #f4a259;
 }
 
+
+.header > ul {
+  list-style-type: none;
+}
+
   #top_navigation {
     order: 1;
     flex-grow: 1;

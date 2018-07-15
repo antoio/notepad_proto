@@ -6,3 +6,106 @@ body {
 a {
   color: #00B7FF;
 }
+
+.content {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+
+.header > ul {
+  list-style-type: none;
+}
+
+  #top_navigation {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #style_switcher {
+    width: 150px;
+  }
+
+  #filter_navigation {
+    align-self: flex-start;
+    flex-grow: 2;
+    display: flex; 
+  }
+
+    .filter {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+    }
+    
+    .filter > li {
+      margin: 0px 25px;
+    }
+
+#note-view {
+  display: flex;
+  flex-direction: column;
+}
+
+  .note {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 20px 20px;
+    border-style: solid;
+    border-color: #bc4b51;
+    border-radius: 3%;
+  }
+
+    .note_header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      color: #f4a259;
+      
+    }
+
+    .note_header > p {
+      font-size: 1.5 em;
+      margin: 5px;
+    }
+
+    .note_header > label {
+      font-style: oblique;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px;
+  width: 25%;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.input_group  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_group > label {
+  justify-content: flex-start;
+}
+
+.input_group > input {
+  justify-content: flex-end;
+}
