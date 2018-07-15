@@ -62,14 +62,20 @@ body {
 
     .note_header {
       display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
       background-color: #bc4b51;
+      color: #f4a259;
+      
     }
 
-    .note_body {
-      display: flex;
-      justify-content: space-evenly;
+    .note_header > p {
+      font-size: 1.5 em;
+      margin: 5px;
     }
-    
-    .note_body > input {
-      align-self: center;
+
+    .note_header > label {
+      font-style: oblique;
+      font-weight: bold;
+      font-size: 1.5em;
     }

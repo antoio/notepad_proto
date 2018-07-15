@@ -49,12 +49,12 @@ $(function() {
 	});
 
 	sortByFinishedDate.click(() => {
-		renderNotes(toggle_finished, (note1, note2) =>{ return new Date(note2.finished_date) - new Date(note1.finished_date) });
+		renderNotes(toggle_finished, (note1, note2) =>{ return new Date(note1.finished_date) - new Date(note2.finished_date) });
 	});
 
 	noteContainer.on("click", "#edit", (event) => {
 		let id = $(event.currentTarget).data("id");
-		location.href = `./newNote.html?id=${id}`;
+		location.href = `./detailNote.html?id=${id}`;
 	});
 
 	noteContainer.on("click", "#delete", (event) => {
