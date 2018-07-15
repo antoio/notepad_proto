@@ -1,4 +1,5 @@
 import {restClient as client} from '../services/restClient.js';
+import {styleService as style} from '../services/styleService.js';
 
 function getUrlVars() {
   let variables = {};
@@ -64,5 +65,13 @@ $(function() {
 
     }
   });
+
+  function setStyle(cssUrl) {
+		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', cssUrl) );
+  }
+  
+  if(style.isStyleActivated()) {
+    setStyle(style.getStyle());
+	}
 
 });

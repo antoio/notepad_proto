@@ -1,5 +1,5 @@
-// import restClient module
 import {restClient as client} from '../services/restClient.js';
+import {styleService as style} from '../services/styleService.js';
 
 
 $(function() {
@@ -9,16 +9,19 @@ $(function() {
 	const sortByImportance = $("#sort_importance");
 	const sortByCreationDate = $("#sort_created");
 	const sortByFinishedDate = $("#sort_finished");
+	const switcher = $("#switcher");
 	let toggle_finished = false;
 
 	const noteRenderer = Handlebars.compile($("#handle-notes").html());
 
+	function setStyle(cssUrl) {
+		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', cssUrl) );
+	}
+
 	// jquery style switcher
-	$("#switcher").change( () => {
-		let base = "../stylesheets/";
-		let url = $("#switcher").val() == "Fruity" ? base + "index.css" : base + "style.css";
-		
-		$('link').replaceWith( $('<link rel="stylesheet" type="text/css" />').attr('href', url) );
+	switcher.change( () => {
+		const cssUrl = style.saveStyle(switcher.val());
+		setStyle(cssUrl);
 	});
 	
 	function renderNotes(filter, order) {
@@ -67,4 +70,9 @@ $(function() {
 
 	renderNotes();
 
+	if(style.isStyleActivated()) {
+		setStyle(style.getStyle());
+		switcher.val(style.getCurrentStyleName());
+	}
+	
 });

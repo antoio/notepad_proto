@@ -2,7 +2,7 @@ class ValueStorage {
 	
 	setItem(name, value) {
 		if (value) {
-			localStorage.setItem(name. JSON.stringify(value));
+			localStorage.setItem(name, JSON.stringify(value));
 		} else {
 			localStorage.removeItem(name);
 		}
