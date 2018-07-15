@@ -79,3 +79,27 @@ body {
       font-weight: bold;
       font-size: 1.5em;
     }
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px;
+  width: 25%;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.input_group  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_group > label {
+  justify-content: flex-start;
+}
+
+.input_group > input {
+  justify-content: flex-end;
+}

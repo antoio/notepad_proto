@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-	<head>
-		<title>Detail Note</title>
-		<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
-		<meta charset="utf-8" />
-	</head>
-<body>
-<nav class="nav">
-  <ul>
-    <li><a href="./index.html">Overview</a></li>
-  </ul>
-</nav>
-<div class="parent">
-<div id="title">
-  <label class="label" for="Title">Title</label>
-  <input class="message" id="message_title" type="text" />
-</div>
-<div id="description">
-  <label class="label" for="Description">Description</label>
-  <textarea class="message" id="message_text" rows="4" cols="40">enter stuff...</textarea>
-</div>
-<div id="finished">
-  <label class="label" for="Finished">Finished</label>
-  <input id="message_isFinished" type="checkbox" name="status">
-</div>
-<div id="priority">
-  <label class="label" for="priority">Priority</label>
-  <input class="priority" id="message_priority" type="number" min="1" max="5">
-</div>
-<div id="date">
-  <label class="label" for="Date">Done until:</label>
-  <input class="message" id="message_date" type="date" />
-</div>
-</div>
-<div id="controls">
-  <button id="saveNote">Save</button>
-  <button id="cancelNote">Cancel</button>
-</div>
+  <head>
+    <title>Detail Note</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+    <meta charset="utf-8" />
+  </head>
 
-<script src="../js/libs/jquery-3.3.1.min.js"></script>
-
-<script src="../js/controllers/detailNoteController.js" type="module"></script>
-</bod>
+  <body>
+  
+    <nav class="header">
+      <ul>
+        <li><a href="./index.html">Overview</a></li>
+      </ul>
+    </nav>
+    
+    <div class="content">
+      <div class="parent">
+        <div id="title" class="input_group">
+          <label class="label" for="Title">Title</label>
+          <input class="message" id="message_title" type="text" />
+        </div>
+        <div id="description" class="input_group">
+          <label class="label" for="Description">Description</label>
+          <textarea class="message" id="message_text" rows="4" cols="40">enter stuff...</textarea>
+        </div>
+        <div id="finished" class="input_group">
+          <label class="label" for="Finished">Finished</label>
+          <input id="message_isFinished" type="checkbox" name="status">
+        </div>
+        <div id="priority" class="input_group">
+          <label class="label" for="priority">Priority</label>
+          <input class="priority" id="message_priority" type="number" min="1" max="5">
+        </div>
+        <div id="date" class="input_group">
+          <label class="label" for="Date">Done until:</label>
+          <input class="message" id="message_date" type="date" />
+        </div>
+      </div>
+    
+      <div class="controls">
+        <button id="saveNote">Save</button>
+        <button id="cancelNote">Cancel</button>
+      </div>
+    </div>
+    
+    <script src="../js/libs/jquery-3.3.1.min.js"></script>
+    
+    <script src="../js/controllers/detailNoteController.js" type="module"></script>
+  </body>
 </html>
