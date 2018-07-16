@@ -12,6 +12,7 @@ function getUrlVars() {
 
 $(function() {
   const saveNote = $("#saveNote");
+  const cancelNote = $("#cancelNote");
 
   class Note {
     constructor(title, message, finished, rating, finished_date) {
@@ -20,7 +21,6 @@ $(function() {
       this.finished_date = finished_date;
       this.created_date = Date.now();
       this.finished = finished;
-      //this.date_description = date_description;
       this.rating = rating;
       this.state = "OK";
     }
@@ -29,16 +29,12 @@ $(function() {
   // output currently selected message
   let id = getUrlVars()["id"];
   if(id) {
-    console.log(`id is ${id}`);
     client.getNote(id).done( (note) => {
       $("#message_title").val(note.title);
       $("#message_text").val(note.message);
       $("#message_isFinished").val(note.finished);
       $("#message_priority").val(note.rating);
       $("#message_date").val(note.finished_date);
-
-      console.table(note);
-
     });
   }
 
@@ -52,18 +48,20 @@ $(function() {
     if(id) {
       
       client.updateNote(id, new Note(title, message, isFinished, priority, finished_date)).done( () => {
-        console.log("Note updated! :)");
         location.href = `./index.html`;
       });
 
     } else {
     
       client.createNote(new Note(title, message, isFinished, priority, finished_date)).done( () => {
-        console.log("Note sent! :)");
         location.href = `./index.html`;
       });
 
     }
+  });
+
+  cancelNote.click(() => {
+    location.href = `./index.html`;
   });
 
   function setStyle(cssUrl) {
