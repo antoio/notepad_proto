@@ -35,7 +35,7 @@ $(function() {
       $("#message_isFinished").val(note.finished);
       $("#message_priority").val(note.rating);
       $("#message_date").val(note.finished_date);
-    });
+     });
   }
 
   saveNote.click(() => {
